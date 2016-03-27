@@ -13,6 +13,10 @@
 		0105A7B41CA7B46B00CF36ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0105A7B21CA7B46B00CF36ED /* Main.storyboard */; };
 		0105A7B61CA7B46B00CF36ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0105A7B51CA7B46B00CF36ED /* Assets.xcassets */; };
 		0105A7B91CA7B46B00CF36ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0105A7B71CA7B46B00CF36ED /* LaunchScreen.storyboard */; };
+		0105A7C11CA7B47000CF36ED /* JSPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0105A7C01CA7B47000CF36ED /* JSPatch.framework */; };
+		0105A7C31CA7B4F000CF36ED /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0105A7C21CA7B4F000CF36ED /* libz.tbd */; };
+		0105A7C51CA7B4F700CF36ED /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0105A7C41CA7B4F700CF36ED /* JavaScriptCore.framework */; };
+		0105A7C71CA7B55300CF36ED /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 0105A7C61CA7B55300CF36ED /* main.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		0105A7B51CA7B46B00CF36ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0105A7B81CA7B46B00CF36ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0105A7BA1CA7B46B00CF36ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0105A7C01CA7B47000CF36ED /* JSPatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatch.framework; sourceTree = "<group>"; };
+		0105A7C21CA7B4F000CF36ED /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		0105A7C41CA7B4F700CF36ED /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		0105A7C61CA7B55300CF36ED /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +41,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0105A7C51CA7B4F700CF36ED /* JavaScriptCore.framework in Frameworks */,
+				0105A7C31CA7B4F000CF36ED /* libz.tbd in Frameworks */,
+				0105A7C11CA7B47000CF36ED /* JSPatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +53,8 @@
 		0105A79D1CA7B46B00CF36ED = {
 			isa = PBXGroup;
 			children = (
+				0105A7C41CA7B4F700CF36ED /* JavaScriptCore.framework */,
+				0105A7C21CA7B4F000CF36ED /* libz.tbd */,
 				0105A7A81CA7B46B00CF36ED /* JSPatchDemo */,
 				0105A7A71CA7B46B00CF36ED /* Products */,
 			);
@@ -58,6 +71,8 @@
 		0105A7A81CA7B46B00CF36ED /* JSPatchDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0105A7C61CA7B55300CF36ED /* main.js */,
+				0105A7C01CA7B47000CF36ED /* JSPatch.framework */,
 				0105A7AC1CA7B46B00CF36ED /* AppDelegate.h */,
 				0105A7AD1CA7B46B00CF36ED /* AppDelegate.m */,
 				0105A7AF1CA7B46B00CF36ED /* ViewController.h */,
@@ -139,6 +154,7 @@
 				0105A7B91CA7B46B00CF36ED /* LaunchScreen.storyboard in Resources */,
 				0105A7B61CA7B46B00CF36ED /* Assets.xcassets in Resources */,
 				0105A7B41CA7B46B00CF36ED /* Main.storyboard in Resources */,
+				0105A7C71CA7B55300CF36ED /* main.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +279,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JSPatchDemo",
+				);
 				INFOPLIST_FILE = JSPatchDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.touchspring.JSPatchDemo;
@@ -274,6 +294,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JSPatchDemo",
+				);
 				INFOPLIST_FILE = JSPatchDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.touchspring.JSPatchDemo;
